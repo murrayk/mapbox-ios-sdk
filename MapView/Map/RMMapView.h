@@ -406,6 +406,17 @@ typedef enum : NSUInteger {
 *   @param index The index of the tile source to hide or show. */
 - (void)setHidden:(BOOL)isHidden forTileSourceAtIndex:(NSUInteger)index;
 
+
+/** Sets the opacity of a tile source
+*   @param opacity A float for opacity 0 - 1
+*   @param tileSource The tile source to change the opacity for */
+- (void)setOpacity:(float)opacity forTileSource:(id <RMTileSource>)tileSource;
+
+/** set opacity of a tile source at a given index.
+*   @param isHidden A Boolean indicating whether to hide the tile source or not.
+*   @param index The index of the tile source to hide or show. */
+- (void)setOpacity:(float)opacity forTileSourceAtIndex:(NSUInteger)index;
+
 /** Reload the tiles for a given tile source. 
 *   @param tileSource The tile source to reload. */
 - (void)reloadTileSource:(id <RMTileSource>)tileSource;
